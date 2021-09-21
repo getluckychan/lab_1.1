@@ -8,13 +8,12 @@ class Pay:
     def summa(self):
         return self.first / self.days * self.second
 while True:
-    try:
+    def Read():
         oklad = input("Введіть оклад: ")
         worked_days = input("Введіть відпрацьовані дні:")
         days_in = input("Введіть дні у місяці: ")
-
+        Display(oklad, worked_days, days_in)
+    def Display(oklad, worked_days, days_in):
         working = Pay(oklad, worked_days, days_in)
-
         print(working.summa())
-    except:
-        print("Введіть інші числа")
+    Read()
