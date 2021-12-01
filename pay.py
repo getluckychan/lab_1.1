@@ -1,10 +1,30 @@
-class Pay:
+from sys import exit
 
-    def __init__(self, first, second, days):
-        self.first = int(first)
-        self.second = float(second)
-        self.days = int(days)
+
+class Pay:
+    def __init__(self):
+        self.__second = 1
+        self.__first = 1
+
+    def set_first(self, first):
+        if first > 0:
+            self.__first = first
+        else:
+            exit("Введіть додатнє число")
+
+    def set_second(self, second):
+        if second > 0:
+            self.__second = second
+        else:
+            exit("Введіть додатнє число")
+
+    def get_first(self):
+        return self.__first
+
+    def get_second(self):
+        return self.__second
 
     def summa(self):
-        return self.first / self.days * self.second
-
+        get_paid = (float(self.__first) / 30)
+        get_paid2 = get_paid * int(self.__second)
+        return get_paid2
