@@ -1,17 +1,10 @@
 from pay import Pay
 
 
-def read():
-    earn = float(input("Введіть оклад: "))
-    worked_days = int(input("Введіть відпрацьовані дні:"))
+def main():
     get = Pay()
-    get.set_first(earn)
-    get.set_second(worked_days)
-    return get.summa()
+    get.read()
+    return get.display()
 
 
-def display():
-    print(read())
-
-
-display()
+main()

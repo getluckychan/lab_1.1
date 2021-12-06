@@ -6,6 +6,10 @@ class Pay:
         self.__second = 1
         self.__first = 1
 
+    def read(self):
+        self.__first = float(input("Введіть оклад: "))
+        self.__second = int(input("Введіть відпрацьовані дні:"))
+
     def set_first(self, first):
         if first > 0:
             self.__first = first
@@ -28,3 +32,7 @@ class Pay:
         get_paid = (float(self.__first) / 30)
         get_paid2 = get_paid * int(self.__second)
         return get_paid2
+
+    def display(self):
+        result = self.summa()
+        print(result)
